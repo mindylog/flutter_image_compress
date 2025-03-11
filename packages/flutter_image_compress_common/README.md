@@ -34,6 +34,7 @@ Compresses image as native plugin (Obj-C/Kotlin). This library works on Android,
   - [About EXIF information](#about-exif-information)
   - [Web](#web)
   - [About macOS](#about-macos)
+  - [Swift Package Manager](#swift-package-manager)
   - [OpenHarmony](#openharmony)
 
 ## Why don't you use dart to do it
@@ -388,6 +389,22 @@ Open xcode project, select Runner target, and change the value of `macOS Deploym
 And, change the `Podfile`:
 Change `platform` to `platform :osx, '10.15'`.
 
+## Swift Package Manager
+
+Swift Package Manager를 사용하여 flutter_image_compress를 iOS 프로젝트에 추가할 수 있습니다.
+
+1. Xcode에서 File > Swift Packages > Add Package Dependency를 선택합니다.
+2. 패키지 URL를 입력합니다: `https://github.com/fluttercandies/flutter_image_compress.git`
+3. 버전 규칙을 선택하고(예: Up to Next Major) 다음을 클릭합니다.
+4. 이제 프로젝트에서 `import flutter_image_compress_common`로 패키지를 사용할 수 있습니다.
+
+또는 Package.swift 파일에 다음을 추가할 수 있습니다:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/fluttercandies/flutter_image_compress.git", from: "1.0.0")
+]
+```
 
 ## OpenHarmony
 
