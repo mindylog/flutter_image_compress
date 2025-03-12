@@ -9,10 +9,9 @@ Compress image with native Swift with faster speed.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'fluttercandies' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.ios.deployment_target = '12.0'
+  s.platform = :ios, '12.0'
 
-  s.source_files = 'Sources/flutter_image_compress_common/**/*'
-  s.public_header_files = 'Sources/flutter_image_compress_common/**/*.h'
+  s.source_files = 'flutter_image_compress_common/Sources/flutter_image_compress_common/**/*'
   s.swift_version = '5.0'
 
   s.dependency 'Flutter'
