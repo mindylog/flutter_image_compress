@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      BREWERY_TOKEN: ${{ secrets.BREWERY_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -17,11 +19,10 @@ jobs:
       - run: flutter pub get
       - run: flutter pub global activate melos
       - run: melos bootstrap
+      - name: Set up private Dart pub dev
+        run: |
+          dart pub token add https://brewery.mindy.kr --env-var BREWERY_TOKEN      
       - name: Try to publish
         run: melos publish --yes --dry-run
-      - name: Write token to local
-        run: |
-          mkdir -p ~/.config/dart
-          echo ${{ secrets.CREDENTIAL_JSON }} > ~/.config/dart/pub-credentials.json
       - name: Publish to pub.dev
         run: melos publish --yes --no-dry-run

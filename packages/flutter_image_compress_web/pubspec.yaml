@@ -2,6 +2,7 @@ name: flutter_image_compress_web
 description: The web implementation of `flutter_image_compress`.
 version: 0.1.5
 repository: https://github.com/fluttercandies/flutter_image_compress
+publish_to: https://brewery.mindy.kr
 
 environment:
   sdk: '>=2.12.0 <4.0.0'
@@ -13,7 +14,9 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
 
-  flutter_image_compress_platform_interface: ^1.0.5
+  flutter_image_compress_platform_interface:
+    hosted: https://brewery.mindy.kr
+    version: ^1.0.5
   web: ^1.1.0
 
 dev_dependencies:
