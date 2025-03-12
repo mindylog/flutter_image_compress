@@ -1,7 +1,8 @@
 name: flutter_image_compress_workspace
 
 environment:
-  sdk: '>=2.18.0 <4.0.0'
+  sdk: '>=3.3.4 <4.0.0'
 
 dev_dependencies:
+  fvm: ^3.1.7
   melos: ^6.0.0

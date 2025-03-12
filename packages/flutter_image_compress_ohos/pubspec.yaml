@@ -11,7 +11,7 @@ topics:
 publish_to: https://brewery.mindy.kr
 
 environment:
-  sdk: '>=2.15.0 <4.0.0'
+  sdk: '>=3.3.4 <4.0.0'
   flutter: '>=3.0.0'
 
 dependencies:
