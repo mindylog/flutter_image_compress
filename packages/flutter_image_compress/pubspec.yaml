@@ -15,7 +15,7 @@ dependencies:
     version: ^1.0.5
   flutter_image_compress_common:
     hosted: https://brewery.mindy.kr
-    version: ^1.0.5
+    version: ^1.0.6
   flutter_image_compress_web:
     hosted: https://brewery.mindy.kr
     version: ^0.1.5
